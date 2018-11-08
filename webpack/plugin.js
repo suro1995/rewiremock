@@ -1,9 +1,9 @@
-const {relative} = require("path");
+const {relative, join} = require("path");
 const {ConcatSource} = require("webpack-sources");
 
 const normalizePath = a => a[0] === '.' ? a : './' + a;
 
-const file = normalizePath(relative(process.cwd(), __dirname + '/interceptor.js').replace(/\\/g, '/'));
+const file = normalizePath(relative(process.cwd(), join(__dirname + '../lib/interceptor.js')).replace(/\\/g, '/'));
 
 const injectString = `/***/if(typeof __webpack_require__!=='undefined') {
    try {
@@ -46,6 +46,6 @@ class RewiremockPlugin {
       });
     });
   }
-};
+}
 
 module.exports = RewiremockPlugin;
