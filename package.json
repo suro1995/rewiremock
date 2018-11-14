@@ -61,7 +61,7 @@
       "**/?(*.)(jest).js?(x)"
     ],
     "globals": {
-      "cross-env BABEL_ENV": "cjs",
+      "BABEL_ENV": "cjs",
       "NODE_ENV": "cjs"
     },
     "transform": {
@@ -97,6 +97,7 @@
     "codecov": "^3.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-mocha": "^5.0.0",
     "flow-bin": "^0.75.0",
     "jest-cli": "^23.0.0",
