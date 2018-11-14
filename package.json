@@ -15,7 +15,7 @@
     "test:karma": "node ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
     "test:browser": "cross-env BABEL_ENV=cjs node ./node_modules/karma/bin/karma start --browsers Chrome",
     "test:webpack": "webpack ./_tests/karma.js ./_tests/bundle.js && mocha --compilers js:babel-core/register ./_tests/bundle.js",
-    "test:jest": "cross-env NODE_ENV=cjs jest",
+    "test:jest": "cross-env BABEL_ENV=cjs jest",
     "build": "npm run build5 && npm run build6",
     "build5": "cross-env BABEL_ENV=cjs babel src -d lib && cp src/index.js.flow lib/index.js.flow",
     "build6": "cross-env BABEL_ENV=ejs babel src -d es && cp src/index.js.flow es/index.js.flow",
