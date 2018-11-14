@@ -32,6 +32,13 @@ module.exports = function (config) {
     ],
 
     //browsers: []
-    browsers: ['PhantomJS', 'Chrome']
+    browsers: ['PhantomJS', 'Chrome_without_security'],
+
+    customLaunchers: {
+      Chrome_without_security: {
+        base: 'Chrome',
+        flags: ['-no-sandbox', '--disable-web-security'],
+      },
+    },
   });
 };
